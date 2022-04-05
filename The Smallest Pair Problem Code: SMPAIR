@@ -1,0 +1,11 @@
+# cook your dish here
+def sol():
+    N = int(input())
+    A = list(map(int, input().split()))
+    A.sort()
+    print(A[0]+A[1])
+
+T=int(input())
+while T>0:
+    T-=1
+    sol()
