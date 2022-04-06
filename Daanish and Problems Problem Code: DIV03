@@ -1,0 +1,30 @@
+# cook your dish here
+def sol():
+
+    A = list(map(int, input().split()))
+
+
+    K=int(input())
+    res=[]
+    for i in range(len(A)-1, -1, -1):
+        
+        if K>=A[i] and A[i]>0:
+            Z =K
+            if Z>A[i]:
+                K=A[i]
+                Z= Z - A[i]
+                A[i] = A[i]- K
+                K = Z
+            else:
+                Z= Z - A[i]
+                A[i] = A[i]- K
+                K = Z
+        if A[i]>0:
+            res.append(i)    
+    print(res[0]+1)
+            
+    
+T=int(input())
+while T>0:
+    T-=1
+    sol()
